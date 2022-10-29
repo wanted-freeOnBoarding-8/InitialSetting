@@ -3,22 +3,15 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
-  overrides: [
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-
-  ],
+  plugins: ['react'],
   rules: {
-     'no-var': 'error', // var 금지
+    'no-var': 'error', // var 금지
     'no-multiple-empty-lines': 'error', // 여러 줄 공백 금지
     'no-console': ['warn', { allow: ['warn', 'error', 'info'] }], // console.log() 금지
     eqeqeq: 'error', // 일치 연산자 사용 필수
@@ -32,5 +25,7 @@ module.exports = {
     'no-unused-vars': 0,
     'no-shadow': 0,
     'react/jsx-props-no-spreading': 0,
-  }
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/react-in-jsx-scope': 0,
+  },
 };
